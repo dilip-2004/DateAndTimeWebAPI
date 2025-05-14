@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
@@ -10,15 +10,16 @@
 		<PublishTrimmed>false</PublishTrimmed>
 		<IncludeNativeLibrariesForSelfExtract>false</IncludeNativeLibrariesForSelfExtract>
 		<PublishReadyToRun>true</PublishReadyToRun>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- Package References -->
+		<PackageReference Include="NodaTime" Version="3.2.2" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
 
 		<!-- Runtime Configuration -->
 		<RuntimeHostConfigurationOption Include="System.GC.Server" Value="true" />
 		<RuntimeHostConfigurationOption Include="System.Runtime.Serialization.EnableUnsafeBinaryFormatterSerialization" Value="false" />
-	</PropertyGroup>
-
-	<ItemGroup>
-		<PackageReference Include="NodaTime" Version="3.2.2" />
-		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
 	</ItemGroup>
 
 </Project>
